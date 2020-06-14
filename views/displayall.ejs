@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="10px" class="table table-striped">
+        <th>username</th>
+        <th>emai</th>
+        <th>paswword</th>
+        <th>delete all</th>
+        <th>update</th>
+        <% userdetails.forEach(function(user) { %>
+            <tr>
+            <td>
+        <%= user.username %>
+
+            </td>
+
+            <td>
+                <%= user.email %>
+       
+            </td>
+            <td>
+                <%= user.password    %>
+    
+            </td>
+              <td>      
+        <input  type="button" name="delete" value="delete" onclick='location.href="/delete/<%= user.username %>" '>
+            
+              </td>
+              <td>      
+                <input  type="button" name="update" value="update" onclick='location.href="/update/<%= user.username %>" '>
+                    
+            </td>
+    </tr>
+       
+        <% }) %>
+
+        </table>
+
+</body>
+</html>
