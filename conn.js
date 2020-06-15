@@ -4,7 +4,7 @@ module.exports = {
     db: mysql.createConnection({
         host: `localhost`,
         user: 'root',
-        password: 'usama',
+        password: 'p97$5w0rd',
         database: 'node',
         port: `3306`,
         charset: 'utf8mb4',
